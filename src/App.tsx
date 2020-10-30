@@ -7,7 +7,7 @@ function App() {
     <div className="App">
 	  <h1>Email Validation</h1>
       <main>
-        <Link x="3" />
+        <Link x="3" y="100" />
       </main>
     </div>
   );

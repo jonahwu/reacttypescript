@@ -12,18 +12,19 @@ const sum = (x:number): number =>{
 
 type LinkProps = {
   x: string;
+  y: string;
 };
 
 
 const Link: React.FC<LinkProps> = (props) => {
-  const { x, children } = props;
+  const { x, y, children } = props;
 	let retx:number = sum(2)
 	let retxf:number = sumf(2)
   console.log('yes i am here ',{retx},{retxf});	
   return (
     <div className="link">
       {/* ... */}
-      <h2>test {retx} {retxf}</h2>
+      <h2>test {y} {retx} {retxf}</h2>
     </div>
   );
 };
