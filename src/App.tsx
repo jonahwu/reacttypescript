@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import SearchCriteria from './components/search'
+import Link from './components/search'
 
 function App() {
   return (
     <div className="App">
 	  <h1>Email Validation</h1>
       <main>
-        <SearchCriteria />
+        <Link x="3" />
       </main>
     </div>
   );
