@@ -8,6 +8,12 @@ interface Props {
 	onSubmit: () => void;
 }
 
+function logsomething():void{
+
+	console.log("yes get some thing here for show i am here");
+	
+}
+
 export const MyForm: React.FC<Props> = () =>{
 	return (
 					<div style={{ textAlign: "center" }}> 
@@ -21,7 +27,8 @@ export const MyForm: React.FC<Props> = () =>{
 				/>
 
 
-				<Button onClick={() => { alert('clicked haha') }} variant="contained" color="primary" >Click me</Button>
+{/*<Button onClick={() => { alert('clicked haha') }} variant="contained" color="primary" >Click me</Button> */}
+				<Button onClick={logsomething} variant="contained" color="primary" >Click me</Button>
 
 				<GroupedSelect />
 				<CustomizedTables />
@@ -31,4 +38,3 @@ export const MyForm: React.FC<Props> = () =>{
 				</div>
 				)
 }
-//LOVE YOU BUNNY
