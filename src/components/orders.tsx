@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Button, TextField, Checkbox } from "@material-ui/core";
 import GroupedSelect from "./groupselect";
 import CustomizedTables from "./tables";
+import FreeSolo from "./autocomplete";
 
 interface Props {
 	onSubmit: () => void;
@@ -24,8 +25,10 @@ export const MyForm: React.FC<Props> = () =>{
 
 				<GroupedSelect />
 				<CustomizedTables />
+				<FreeSolo />
 
 				
 				</div>
 				)
 }
+//LOVE YOU BUNNY
