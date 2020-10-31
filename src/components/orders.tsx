@@ -1,5 +1,7 @@
 import * as React from 'react';
 import {Button, TextField, Checkbox } from "@material-ui/core";
+import GroupedSelect from "./groupselect";
+import CustomizedTables from "./tables";
 
 interface Props {
 	onSubmit: () => void;
@@ -16,6 +18,13 @@ export const MyForm: React.FC<Props> = () =>{
 					value="checkedA"
 					inputProps={{ 'aria-label': 'Checkbox A' }}
 				/>
+
+
+				<Button onClick={() => { alert('clicked haha') }} variant="contained" color="primary" >Click me</Button>
+
+				<GroupedSelect />
+				<CustomizedTables />
+
 				
 				</div>
 				)
