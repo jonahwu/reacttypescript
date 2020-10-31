@@ -7,7 +7,7 @@ import Drawer from '@material-ui/core/Drawer'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Link from './components/search'
-import Orders from './components/orders'
+import {MyForm} from './components/orders'
 
 import AppMenu from './AppMenu'
 
@@ -36,7 +36,7 @@ const App: React.FC = () => {
 
             <Switch>
               <Route path="/" exact component={Link} />
-              <Route path="/orders" component={Orders} />
+              <Route path="/orders"  component={MyForm} />
               <Route path="/customers" component={PageCustomers} />
               <Route path="/reports" component={PageReports} />
             </Switch>
