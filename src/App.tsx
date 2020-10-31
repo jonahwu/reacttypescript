@@ -6,6 +6,8 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
+import Link from './components/search'
+import {MyForm} from './components/orders'
 
 import AppMenu from './AppMenu'
 
@@ -33,8 +35,8 @@ const App: React.FC = () => {
           <Container maxWidth="lg" className={classes.container}>
 
             <Switch>
-              <Route path="/" exact component={PageDashboard} />
-              <Route path="/orders" component={PageOrders} />
+              <Route path="/" exact component={Link} />
+              <Route path="/orders"  component={MyForm} />
               <Route path="/customers" component={PageCustomers} />
               <Route path="/reports" component={PageReports} />
             </Switch>

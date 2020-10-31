@@ -73,7 +73,6 @@ function sendAProps(dd:AProps):number{
 	return 1
 }
 
-
 function playingMap(){
 	const devices: string[] = ['1', 'pixel', 'ipad', 'note 10'];
 	devices.map((bds) => {
@@ -86,7 +85,7 @@ function playingMap(){
   );
 }
 
-const Link: React.FC<LinkProps> = (props) => {
+const Orders: React.FC<LinkProps> = (props) => {
   const { x, y, children } = props;
 	let retx:number = sum(Number(x))
 	const retxf:number = sumf(2)
@@ -122,6 +121,6 @@ const Link: React.FC<LinkProps> = (props) => {
   );
 };
 
-export default Link;
+export default Orders;
 
 
