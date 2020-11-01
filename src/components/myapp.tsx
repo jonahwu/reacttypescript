@@ -1,13 +1,6 @@
 import * as React from 'react';
-import {useState} from 'react'
-import {Button, TextField, Checkbox } from "@material-ui/core";
-import GroupedSelect from "./groupselect";
-import CustomizedTables from "./tables";
-import FreeSolo from "./autocomplete";
-import { makeStyles } from '@material-ui/core/styles'
-import {buttonStyles} from "./zvstyle"
-import {useStyles} from "./zvstyle"
-import clsx from 'clsx'
+import {Fragment, useState} from 'react'
+import { Button, TextField, Checkbox } from "@material-ui/core";
 
 
 interface Props {
@@ -23,11 +16,15 @@ type FormElem = React.FormEvent<HTMLFormElement>
 export const MyApp: React.FC<Props> = () =>{
 
 	const [inputValue, setInputValue] = useState<string>('')
+	const [typeList, setTypeList] = useState<string[]>([])
 
 	const handleSubmit = (e: FormElem): void => {
 					e.preventDefault()
 					console.log("the input value",inputValue)
 				  setInputValue('')
+					const newtypeList: string[] = [...typeList, inputValue]
+					console.log("the input value list",newtypeList)
+					setTypeList(newtypeList)
 	}
 
 
@@ -38,11 +35,15 @@ export const MyApp: React.FC<Props> = () =>{
 		console.log("in to task")
 	}
 	return (
-					  <form onSubmit={handleSubmit}>
+					<Fragment>
 							<h1> I am here </h1>
+					  <form onSubmit={handleSubmit}>
 							<input type='text' value={inputValue} onChange={e => setInputValue(e.target.value)} />
 							<button type='submit'> Click Me </button>
+					{/*<Button type='submit'> Click Me </Button> */}
+
 						</form>
+					</Fragment>
 				
 				)
 }
