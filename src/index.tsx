@@ -8,10 +8,14 @@ import {Provider} from 'react-redux'
 import rootReducer from './components/reducers'
 import createSagaMiddleware from 'redux-saga'
 import {watchCountUp} from './sagas/saga'
+//one might add more here
+//import {watchCountDown, watchCountUp} from './sagas/saga'
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(watchCountUp);
+// one might add more here
+//sagaMiddleware.run(watchCountDown);
 
 
 ReactDOM.render(

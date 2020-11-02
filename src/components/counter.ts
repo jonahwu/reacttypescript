@@ -4,7 +4,7 @@ import { Provider, useSelector, useDispatch } from "react-redux";
 import { createStore } from "redux";
 import { State, initialState } from "./typesinfo"
 
-type Action = { type: 'reset' } | { type: 'INCREMENT' } | { type: 'DECREMENT' }| { type: 'INCREMENT_ASYNC' };
+type Action = { type: 'reset' } | { type: 'INCREMENT' } | { type: 'DECREMENT' }| { type: 'INCREMENT_ASYNC' }| { type: 'DECREMENT_ASYNC' };
 
 
 

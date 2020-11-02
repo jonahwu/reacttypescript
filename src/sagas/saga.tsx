@@ -13,3 +13,8 @@ function* countUpAsync(){
 export function* watchCountUp(){
 	yield takeEvery('INCREMENT', countUpAsync);
 }
+				/*
+export function* watchCountDown(){
+	yield takeEvery('DECREMENT', countUpAsync);
+}
+				 */
