@@ -22,7 +22,7 @@ const counter = (state = initialState, action: Action) => {
 									return newstate
           case "DECREMENT":
 							console.log('receive increment command:',state)
-									const newstatede:State= {count:state.count+1}
+									const newstatede:State= {count:state.count-1}
 									return newstatede
           default:
 							console.log('not receive command:',state)
