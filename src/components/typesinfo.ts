@@ -6,3 +6,12 @@ export interface AProps {
 }
 
 
+
+export  interface State {
+    count: number;
+  }
+
+export const initialState={
+    count: 1
+  }
+

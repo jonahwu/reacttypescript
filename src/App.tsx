@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography'
 import Link from './components/search'
 import {MyForm} from './components/orders'
 import {MyApp} from './components/myapp'
+import {Report} from './components/report'
+import {Report1} from './components/report1'
 
 import AppMenu from './AppMenu'
 
@@ -39,7 +41,8 @@ const App: React.FC = () => {
               <Route path="/" exact component={Link} />
               <Route path="/orders"  component={MyForm} />
               <Route path="/customers" component={MyApp} />
-              <Route path="/reports" component={PageReports} />
+              <Route path="/reports" component={Report} />
+              <Route path="/reports1" component={Report1} />
             </Switch>
 
           </Container>
