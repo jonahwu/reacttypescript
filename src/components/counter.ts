@@ -2,15 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider, useSelector, useDispatch } from "react-redux";
 import { createStore } from "redux";
+import { State, initialState } from "./typesinfo"
 
 type Action = { type: 'reset' } | { type: 'INCREMENT' } | { type: 'DECREMENT' };
 
-interface State {
-  count: number;
-}
-let initialState={
-	count: 0
-}
 
 
 const counter = (state = initialState, action: Action) => {

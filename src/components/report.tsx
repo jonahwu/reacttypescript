@@ -3,6 +3,7 @@ import {Fragment, useState} from 'react'
 import { Button, TextField, Checkbox } from "@material-ui/core";
 import {useSelector, useDispatch} from 'react-redux'
 import { AppState } from './reducers';
+import { State } from "./typesinfo"
 
 
 
@@ -20,9 +21,6 @@ type FormElem = React.FormEvent<HTMLFormElement>
 
 export const Report: React.FC<Props> = () =>{
 
-interface State {
-				count: number;
-}
 const counterd:State = useSelector((state: AppState) => state.counter)
 
 const dispatch = useDispatch()
