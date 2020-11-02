@@ -20,8 +20,11 @@ type FormElem = React.FormEvent<HTMLFormElement>
 
 export const Report: React.FC<Props> = () =>{
 
+interface State {
+				count: number;
+}
+const counterd:State = useSelector((state: AppState) => state.counter)
 
-const counterd: number = useSelector((state: AppState) => state.counter)
 const dispatch = useDispatch()
 
 	const handleIncrement = (e: FormElem):void => {
@@ -44,7 +47,7 @@ const dispatch = useDispatch()
 	}
 	return (
 		<Fragment>	
-				<input type='text' value={counterd} />
+				<input type='text' value={counterd.count} />
 
 				<form onSubmit={handleIncrement}>
 					<button type='submit'> + </button>

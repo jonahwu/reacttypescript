@@ -5,16 +5,25 @@ import { createStore } from "redux";
 
 type Action = { type: 'reset' } | { type: 'INCREMENT' } | { type: 'DECREMENT' };
 
+interface State {
+  count: number;
+}
+let initialState={
+	count: 0
+}
 
-const counter = (state = 0, action: Action) => {
-			console.log('show state number:',state)
+
+const counter = (state = initialState, action: Action) => {
+			console.log('show state number:',state.count)
       switch(action.type){
           case "INCREMENT":
-							console.log('receive increment command:',state)
-              return state+1
+							console.log('receive increment command:',state.count)
+							const newstate:State= {count:state.count+1}
+									return newstate
           case "DECREMENT":
 							console.log('receive increment command:',state)
-              return state-1
+									const newstatede:State= {count:state.count+1}
+									return newstatede
           default:
 							console.log('not receive command:',state)
               return state
