@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from 'redux'
+import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import rootReducer from './components/reducers'
+import createSagaMiddleware from 'redux-saga'
+import {watchCountUp} from './sagas/saga'
+//one might add more here
+//import {watchCountDown, watchCountUp} from './sagas/saga'
 
-
-
-const store = createStore(rootReducer);
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(watchCountUp);
+// one might add more here
+//sagaMiddleware.run(watchCountDown);
 
 
 ReactDOM.render(
